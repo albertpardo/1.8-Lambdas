@@ -1,6 +1,6 @@
 package level1ex5;
 
-import level1ex5.sol2.interfaces.GetPiValueFunctionalInterface;
+import level1ex5.interfaces.GetPiValueFunctionalInterface;
 
 public class Main {
     public static void main(String[] args){
