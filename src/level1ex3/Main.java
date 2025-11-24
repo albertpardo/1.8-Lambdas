@@ -8,7 +8,7 @@ import java.util.List;
 public class Main {
     private static void printMonthNamesWithLambdas(List<String> listMonths){
         System.out.println("-- List of Months of year (using Lambda):");
-        listMonths.forEach(m -> System.out.println(m));
+        listMonths.forEach(month -> System.out.println(month));
     }
 
     // alternative using Method Reference. It's a special form for lambdas
