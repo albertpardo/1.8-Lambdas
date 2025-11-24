@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    private static List<String> filterByCharO(List<String> list){
-        return list.stream().filter(string -> (string.contains("o") || string.contains("O"))).toList();
+    private static List<String> filterByCharOAndMore5Chars(List<String> list){
+        return list.stream().filter(string -> (string.contains("o") || string.contains("O")) && string.length() > 5).toList();
     }
 
     private static List<String> createWordList(){
@@ -25,6 +25,6 @@ public class Main {
         List<String> myStringList;
 
         myStringList = createWordList();
-        System.out.println(filterByCharO(myStringList));
+        System.out.println(filterByCharOAndMore5Chars(myStringList));
     }
 }
