@@ -1,4 +1,4 @@
-package level1ex5.sol2.interfaces;
+package level1ex5.interfaces;
 
 @FunctionalInterface
 public interface GetPiValueFunctionalInterface {
