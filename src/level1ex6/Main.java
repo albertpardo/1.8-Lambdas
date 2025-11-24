@@ -13,6 +13,7 @@ public class Main {
         list.add("Octopussy");
         list.add(1324164674);
         list.add("Abracadabra");
+        list.add(123.56);
         list.add("A");
         list.add("Input");
         return list;
