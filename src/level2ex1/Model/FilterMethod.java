@@ -1,8 +1,8 @@
-package level2ex1.Models;
+package level2ex1.Model;
 
 import java.util.List;
 
-public class FilterMetods {
+public class FilterMethod {
 
     public static List<String> filterByStarWithCharAand3CharsLength(List<String> inputList){
         List<String> resultList;

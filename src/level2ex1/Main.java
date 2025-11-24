@@ -1,6 +1,6 @@
 package level2ex1;
 
-import level2ex1.Models.FilterMetods;
+import level2ex1.Model.FilterMethod;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,7 +17,7 @@ public class Main {
         List<String> list = createStringList();
         List<String> resultList;
 
-        resultList = FilterMetods.filterByStarWithCharAand3CharsLength(list);
+        resultList = FilterMethod.filterByStarWithCharAand3CharsLength(list);
         resultList.forEach(System.out::println);
     }
 }
