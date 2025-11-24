@@ -35,11 +35,11 @@ public class Main {
 
     public static void  main(String[] args){
         List<Object> objectsList;
-        List<String> objectsListByIncrementalLength;
+        List<String> objectsListByDecrementalLength;
 
         objectsList = createObjectsList();
-        objectsListByIncrementalLength = sortListByDecrementalLength(objectsList);
-        printLists(objectsList, objectsListByIncrementalLength);
+        objectsListByDecrementalLength = sortListByDecrementalLength(objectsList);
+        printLists(objectsList, objectsListByDecrementalLength);
     }
 
 
