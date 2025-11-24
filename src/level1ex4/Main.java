@@ -1,4 +1,4 @@
-package level1ex3;
+package level1ex4;
 
 
 import java.util.ArrayList;
@@ -6,9 +6,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
-    private static void printMonthNamesWithLambdas(List<String> listMonths){
-        System.out.println("-- List of Months of year (using Lambda):");
-        listMonths.forEach(month -> System.out.println(month));
+    // alternative using Method Reference. It's a special form for lambdas
+    private static void printMonthNamesWithMethodReference(List<String> listMonths){
+        System.out.println("-- List of Months of year (using Method Reference):");
+        listMonths.forEach(System.out::println);
     }
 
     private static List<String> createMonthsNameList(){
@@ -21,6 +22,6 @@ public class Main {
         List<String> months;
 
         months = createMonthsNameList();
-        printMonthNamesWithLambdas(months);
+        printMonthNamesWithMethodReference(months);
     }
 }
