@@ -18,6 +18,7 @@ public class Main {
         list.add("Input");
         return list;
     }
+
     private static List<String> sortListByDecrementalLength(List<Object> objectsList) {
         List<String> sortedList = objectsList.stream()
                 .map(Object::toString)
@@ -41,8 +42,4 @@ public class Main {
         objectsListByDecrementalLength = sortListByDecrementalLength(objectsList);
         printLists(objectsList, objectsListByDecrementalLength);
     }
-
-
-
-
 }

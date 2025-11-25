@@ -12,11 +12,11 @@ public class Main {
         List<Integer> integers;
         String result;
 
-        integers = new ArrayList<>(Arrays.asList(3, 55, 44));
+        integers = Arrays.asList(3, 55, 44);
         result = stringWithEvenAndOddIntegers(integers);
         System.out.println("--Test 1:");
         System.out.println(result);
-        integers = new ArrayList<>(Arrays.asList(1, 50, 1003, 3, 42, 7));
+        integers = Arrays.asList(1, 50, 1003, 3, 42, 7);
         result = stringWithEvenAndOddIntegers(integers);
         System.out.println("--Test 2:");
         System.out.println(result);

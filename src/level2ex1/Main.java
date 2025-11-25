@@ -9,8 +9,7 @@ import java.util.List;
 
 public class Main {
     private static List<String> createStringList(){
-        List<String> list = new ArrayList<>(Arrays.asList("Artemis", "aran", "Ari", "Ana", "anastasia", "Antoni", "Ans", "aso"));
-        return list;
+        return Arrays.asList("Artemis", "aran", "Ari", "Ana", "anastasia", "Antoni", "Ans", "aso");
     }
 
     public static void  main(String[] args){
