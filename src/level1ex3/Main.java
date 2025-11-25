@@ -12,7 +12,7 @@ public class Main {
     }
 
     private static List<String> createMonthsNameList(){
-        List<String> list = new ArrayList<>(Arrays.asList("January",  "February", "March",  "April", "May", "June", "July", "August", "September", "October", "November", "December"));
+        List<String> list = Arrays.asList("January",  "February", "March",  "April", "May", "June", "July", "August", "September", "October", "November", "December");
         return list;
     }
 
