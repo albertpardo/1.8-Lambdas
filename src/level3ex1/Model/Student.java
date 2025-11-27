@@ -21,6 +21,10 @@ public class Student {
         return age;
     }
 
+    public double getNote(){
+        return note;
+    }
+
     @Override
     public String toString(){
         return "[name = " + name + ", age = " + age  + ", course = " + course + ", note = " + note + "]";
