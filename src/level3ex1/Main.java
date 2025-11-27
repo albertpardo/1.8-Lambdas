@@ -28,14 +28,18 @@ public class Main {
         students.forEach(student -> System.out.println( student.getName() + ", " + student.getAge()));
     }
 
-    private static void printStudentsWithNameStartWithA(List<Student> students){
+    private static void filterAndPrintStudentsWithNameStartWithA(List<Student> students){
+        List<Student> filterStudents;
+
+        filterStudents = students.stream().filter(student -> student.getName().toLowerCase().charAt(0) == 'a').toList();
         System.out.println("--- Students with Names start with 'A':");
+        filterStudents.forEach(System.out::println);
     }
     public static void main(String[] args){
         List<Student> students;
 
         students = getTenStudentList();
         printStudentNameAndAge(students);
-        printStudentsWithNameStartWithA(students);
+        filterAndPrintStudentsWithNameStartWithA(students);
     }
 }
