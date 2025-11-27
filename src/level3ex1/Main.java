@@ -71,14 +71,14 @@ public class Main {
         List<Student> filterStudents;
 
         filterStudents = students.stream().filter(student -> ( student.getNote() > 5.0 && !Objects.equals(student.getCourse(), Course.PHP.getName()))).toList();
-        printFilteredStudents("--- Students with note > 5.0 and They are not in 'PHP' course:", filterStudents);
+        printFilteredStudents("--- Students with note > 5.0 and They are not in '" + Course.PHP.getName() + "' course:", filterStudents);
     }
 
     private static void filterAndPrintJavaStudentsOfLegalAge(List<Student> students){
         List<Student> filterStudents;
 
         filterStudents = students.stream().filter(student -> ( Objects.equals(student.getCourse(), Course.JAVA.getName()) && student.getAge() >= OF_LEGAL_AGE )).toList();
-        printFilteredStudents("--- Of Legal Age Students in 'JAVA' course:", filterStudents);
+        printFilteredStudents("--- Of Legal Age Students in '" + Course.JAVA.getName() + "' course:", filterStudents);
     }
 
     public static void main(String[] args){
