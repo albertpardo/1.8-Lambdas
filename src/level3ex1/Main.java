@@ -19,8 +19,8 @@ public class Main {
         students.add((new Student("Andreu Garcia", 32, "JAVA", 9.2)));
         students.add((new Student("Jordi Baylina", 49, "PHP", 8.9)));
         students.add((new Student("Sergio Ramirez", 22, "PHP", 7.5)));
-        students.add((new Student("Ruth Zamora", 26, "JAVA", 4.8)));
-        students.add((new Student("Pau Soret", 33, "JAVA", 9.4)));
+        students.add((new Student("Ruth Zamora", 16, "JAVA", 4.8)));
+        students.add((new Student("Pau Soret", 17, "JAVA", 9.4)));
         return students;
     }
 
@@ -45,17 +45,23 @@ public class Main {
         List<Student> filterStudents;
 
         filterStudents = students.stream().filter(student -> student.getNote() > 5.0).toList();
-        printFilteredStudents("--- Students with note > 5.0", filterStudents);
+        printFilteredStudents("--- Students with note > 5.0:", filterStudents);
     }
 
     private static void filterAndPrintStudentsWithNoteGraterThanFiveAndNotPhp(List<Student> students){
         List<Student> filterStudents;
 
         filterStudents = students.stream().filter(student -> ( student.getNote() > 5.0 && !Objects.equals(student.getCourse(), "PHP"))).toList();
-        printFilteredStudents("--- Students with note > 5.0 and They are not in 'PHP' course", filterStudents);
+        printFilteredStudents("--- Students with note > 5.0 and They are not in 'PHP' course:", filterStudents);
     }
 
-    
+    private static void filterAndPrintJavaStudentsOfLegalAge(List<Student> students){
+        List<Student> filterStudents;
+
+        filterStudents = students.stream().filter(student -> ( Objects.equals(student.getCourse(), "JAVA") && student.getAge() >= 18 )).toList();
+        printFilteredStudents("--- Of Legal Age Students in 'JAVA' course:", filterStudents);
+    }
+
     public static void main(String[] args){
         List<Student> students;
 
@@ -64,5 +70,6 @@ public class Main {
         filterAndPrintStudentsWithNameStartWithA(students);
         filterAndPrintStudentsWithNoteGraterThanFive(students);
         filterAndPrintStudentsWithNoteGraterThanFiveAndNotPhp(students);
+        filterAndPrintJavaStudentsOfLegalAge(students);
     }
 }
