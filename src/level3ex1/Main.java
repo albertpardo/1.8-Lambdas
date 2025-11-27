@@ -4,6 +4,7 @@ import level3ex1.Model.Student;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Main {
 
@@ -23,6 +24,11 @@ public class Main {
         return students;
     }
 
+    private static void printFilteredStudents(String msg, List<Student> filterStudents){
+        System.out.println(msg);
+        filterStudents.forEach(System.out::println);
+    }
+
     private static void printStudentNameAndAge(List<Student> students){
         System.out.println("--- Students Names and Age:");
         students.forEach(student -> System.out.println( student.getName() + ", " + student.getAge()));
@@ -32,17 +38,24 @@ public class Main {
         List<Student> filterStudents;
 
         filterStudents = students.stream().filter(student -> student.getName().toLowerCase().charAt(0) == 'a').toList();
-        System.out.println("--- Students with Names start with 'A':");
-        filterStudents.forEach(System.out::println);
+        printFilteredStudents("--- Students with Names start with 'A':", filterStudents);
     }
 
     private static void filterAndPrintStudentsWithNoteGraterThanFive(List<Student> students){
         List<Student> filterStudents;
 
         filterStudents = students.stream().filter(student -> student.getNote() > 5.0).toList();
-        System.out.println("--- Students with note > 5.0");
-        filterStudents.forEach(System.out::println);
+        printFilteredStudents("--- Students with note > 5.0", filterStudents);
     }
+
+    private static void filterAndPrintStudentsWithNoteGraterThanFiveAndNotPhp(List<Student> students){
+        List<Student> filterStudents;
+
+        filterStudents = students.stream().filter(student -> ( student.getNote() > 5.0 && !Objects.equals(student.getCourse(), "PHP"))).toList();
+        printFilteredStudents("--- Students with note > 5.0 and They are not in 'PHP' course", filterStudents);
+    }
+
+    
     public static void main(String[] args){
         List<Student> students;
 
@@ -50,6 +63,6 @@ public class Main {
         printStudentNameAndAge(students);
         filterAndPrintStudentsWithNameStartWithA(students);
         filterAndPrintStudentsWithNoteGraterThanFive(students);
-        
+        filterAndPrintStudentsWithNoteGraterThanFiveAndNotPhp(students);
     }
 }

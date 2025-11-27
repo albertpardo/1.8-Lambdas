@@ -25,6 +25,10 @@ public class Student {
         return note;
     }
 
+    public  String getCourse(){
+        return course;
+    }
+
     @Override
     public String toString(){
         return "[name = " + name + ", age = " + age  + ", course = " + course + ", note = " + note + "]";
