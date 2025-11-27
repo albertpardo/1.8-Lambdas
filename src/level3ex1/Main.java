@@ -12,7 +12,7 @@ public class Main {
         List<Student> students = new ArrayList<>();
 
         students.add(new Student("Antonella Barber", 20, "PHP", 8.5));
-        students.add(new Student("Marco Martelli", 24, "ANGULARr" , 4.1));
+        students.add(new Student("Marco Martelli", 24, "ANGULAR" , 4.1));
         students.add(new Student("Mireia Boch", 30, "JAVA", 9.9));
         students.add(new Student("Francisco Perez", 46, "PHP", 9.1));
         students.add((new Student("Judith Massana", 29, "C++", 9.8)));
